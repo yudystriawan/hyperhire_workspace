@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hyperhire_client/di/di.dart';
 import 'package:hyperhire_client/presentation/presentation.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await configureDependencies();
+
   runApp(const MainApp());
 }
 
