@@ -30,4 +30,4 @@ flutter:
   generate: false
 
   assets:
-    - assets/
+    - assets/images/

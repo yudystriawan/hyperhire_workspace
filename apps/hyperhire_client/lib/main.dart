@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hyperhire_client/di/di.dart';
 import 'package:hyperhire_client/presentation/presentation.dart';
+import 'package:ui/ui.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,13 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: _appRouter.config());
+    return ScreenUtilInit(
+      designSize: Size(360, 800),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(routerConfig: _appRouter.config());
+      },
+    );
   }
 }

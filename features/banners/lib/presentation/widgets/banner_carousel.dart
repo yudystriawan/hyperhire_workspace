@@ -45,44 +45,60 @@ class _CarouselWidget extends StatefulWidget {
   const _CarouselWidget({required this.urls});
 
   @override
-  __CarouselWidgetState createState() => __CarouselWidgetState();
+  State<_CarouselWidget> createState() => _CarouselWidgetState();
 }
 
-class __CarouselWidgetState extends State<_CarouselWidget>
+class _CarouselWidgetState extends State<_CarouselWidget>
     with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-  late final Animation<double> _animation;
+  late final PageController _pageController;
+  late final AnimationController _animationController;
+  int _currentPage = 0;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+    _pageController = PageController(initialPage: _currentPage);
+    _animationController = AnimationController(
       vsync: this,
-    )..repeat(reverse: true);
-    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+      duration: const Duration(seconds: 2),
+    )..addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        _animationController.reset();
+        _currentPage = (_currentPage + 1) % widget.urls.length;
+        _pageController
+            .animateToPage(
+              _currentPage,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeInOut,
+            )
+            .then((_) {
+              _animationController.forward();
+            });
+      }
+    });
+    _animationController.forward();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _pageController.dispose();
+    _animationController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return FadeTransition(
-      opacity: _animation,
-      child: SizedBox(
-        width: 360.w,
-        height: 221.w,
-        child: PageView.builder(
-          itemCount: widget.urls.length,
-          itemBuilder: (context, index) {
-            return Image.asset(widget.urls[index], fit: BoxFit.cover);
-          },
-        ),
-      ),
+    return PageView.builder(
+      controller: _pageController,
+      itemCount: widget.urls.length,
+      itemBuilder: (context, index) {
+        return Image(
+          image: AssetImage(
+            'assets/images/${widget.urls[index]}',
+            package: 'banners',
+          ),
+        );
+      },
     );
   }
 }
