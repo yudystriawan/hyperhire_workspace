@@ -8,11 +8,11 @@ environment:
 
 dependencies:
   core: ^0.0.1
+  ui: ^0.0.1
   dartz: ^0.10.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.0.0
-  flutter_screenutil: ^5.9.3
   freezed_annotation: ^3.0.0
   kt_dart: ^1.1.0
 
