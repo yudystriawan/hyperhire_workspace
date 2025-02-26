@@ -8,6 +8,9 @@ environment:
 workspace: 
  - packages/core
 
+dependencies:
+  dartz: ^0.10.1
+  
 dev_dependencies:
   melos: ^6.3.2
   flutter_lints: ^5.0.0
