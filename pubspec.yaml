@@ -5,13 +5,13 @@ environment:
   sdk: ^3.7.0
   flutter: ">=1.17.0"
 
-workspace: 
- - packages/core
- - packages/banners
-
 dependencies:
   dartz: ^0.10.1
+  freezed_annotation: ^3.0.0
+  kt_dart: ^1.1.0
   
 dev_dependencies:
   melos: ^6.3.2
   flutter_lints: ^5.0.0
+  freezed: ^3.0.0
+  build_runner: ^2.4.15
