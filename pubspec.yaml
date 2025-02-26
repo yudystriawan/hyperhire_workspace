@@ -12,6 +12,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   injectable: ^2.5.0
   get_it: ^8.0.3
+  auto_route: ^9.3.0+1
+
   
 dev_dependencies:
   melos: ^6.3.2
@@ -19,4 +21,5 @@ dev_dependencies:
   freezed: ^3.0.0
   build_runner: ^2.4.15
   injectable_generator: ^2.7.0
+  auto_route_generator: ^9.3.1
 
