@@ -1,0 +1,5 @@
+name: hyperhire_workspace
+
+packages:
+  - apps/**
+  - packages/**

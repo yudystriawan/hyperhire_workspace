@@ -1,0 +1,13 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
+  exclude:
+      - "bin/cache/**"
+      - "**/*.freezed.dart"
+      - "**/*.g.dart"
+      - "**/*.mocks.dart"
+      - "**/generated/**"
