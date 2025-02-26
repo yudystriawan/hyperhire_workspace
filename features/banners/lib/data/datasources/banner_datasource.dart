@@ -1,7 +1,10 @@
+import 'package:injectable/injectable.dart';
+
 abstract class BannerDatasource {
   Future<List<String>> fetchBannerUrls();
 }
 
+@Injectable(as: BannerDatasource)
 class BannerDatasourceImpl implements BannerDatasource {
   @override
   Future<List<String>> fetchBannerUrls() async {

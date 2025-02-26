@@ -1,8 +1,10 @@
 import 'package:banners/banners.dart';
 import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 
+@injectable
 class GetBannerUrlsUsecase implements Usecase<BannerFailure, KtList<String>> {
   final BannerRepository _repository;
 
