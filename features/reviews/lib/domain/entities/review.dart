@@ -9,7 +9,7 @@ abstract class Review with _$Review {
     required String id,
     required double rating,
     required int reviewCount,
-    required String productId,
+    required ProductReview product,
     required KtList<String> keywords,
     required KtList<Reviewer> reviewers,
   }) = _Review;
@@ -22,4 +22,13 @@ abstract class Reviewer with _$Reviewer {
     required String content,
     required KtList<String> imageUrls,
   }) = _Reviewer;
+}
+
+@freezed
+abstract class ProductReview with _$ProductReview {
+  const factory ProductReview({
+    required String id,
+    required String name,
+    required String imageUrl,
+  }) = _ProductReview;
 }

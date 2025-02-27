@@ -21,11 +21,23 @@ abstract class ReviewDto with _$ReviewDto {
     required String id,
     required double rating,
     required int reviewCount,
-    required String productId,
+    required ProductReviewDto product,
     required List<String> keywords,
     required List<ReviewerDto> reviewers,
   }) = _ReviewDto;
 
   factory ReviewDto.fromJson(Map<String, dynamic> json) =>
       _$ReviewDtoFromJson(json);
+}
+
+@freezed
+abstract class ProductReviewDto with _$ProductReviewDto {
+  const factory ProductReviewDto({
+    required String id,
+    required String name,
+    required String imageUrl,
+  }) = _ProductReviewDto;
+
+  factory ProductReviewDto.fromJson(Map<String, dynamic> json) =>
+      _$ProductReviewDtoFromJson(json);
 }

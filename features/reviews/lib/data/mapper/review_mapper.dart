@@ -4,31 +4,11 @@ import 'package:kt_dart/collection.dart';
 import 'package:reviews/reviews.dart';
 
 @injectable
-class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
-  @override
-  Reviewer mapToEntity(ReviewerDto model) {
-    return Reviewer(
-      userId: model.userId,
-      content: model.content,
-      imageUrls: model.imageUrls.toImmutableList(),
-    );
-  }
-
-  @override
-  ReviewerDto mapToModel(Reviewer entity) {
-    return ReviewerDto(
-      userId: entity.userId,
-      content: entity.content,
-      imageUrls: entity.imageUrls.asList(),
-    );
-  }
-}
-
-@injectable
 class ReviewMapper implements Mapper<Review, ReviewDto> {
   final ReviewerMapper _reviewerMapper;
+  final ProductReviewMapper _productReviewMapper;
 
-  ReviewMapper(this._reviewerMapper);
+  ReviewMapper(this._reviewerMapper, this._productReviewMapper);
 
   @override
   Review mapToEntity(ReviewDto model) {
@@ -36,7 +16,7 @@ class ReviewMapper implements Mapper<Review, ReviewDto> {
       id: model.id,
       rating: model.rating,
       reviewCount: model.reviewCount,
-      productId: model.productId,
+      product: _productReviewMapper.mapToEntity(model.product),
       keywords: model.keywords.toImmutableList(),
       reviewers:
           model.reviewers
@@ -51,7 +31,7 @@ class ReviewMapper implements Mapper<Review, ReviewDto> {
       id: entity.id,
       rating: entity.rating,
       reviewCount: entity.reviewCount,
-      productId: entity.productId,
+      product: _productReviewMapper.mapToModel(entity.product),
       keywords: entity.keywords.asList(),
       reviewers:
           entity.reviewers
