@@ -13,21 +13,21 @@ class TopReviewersLoaderBloc
     extends Bloc<TopReviewersLoaderEvent, TopReviewersLoaderState> {
   final GetTop10ReviewersUsecase _getTop10ReviewersUsecase;
 
-  TopReviewersLoaderBloc(this._getTop10ReviewersUsecase) : super(_Initial()) {
+  TopReviewersLoaderBloc(this._getTop10ReviewersUsecase) : super(Initial()) {
     on<_Fetched>(_onFetched);
   }
 
   void _onFetched(_Fetched event, Emitter<TopReviewersLoaderState> emit) async {
-    if (state == _LoadInProgress()) return;
+    if (state == LoadInProgress()) return;
 
-    emit(_LoadInProgress());
+    emit(LoadInProgress());
 
     final failureOrSuccess = await _getTop10ReviewersUsecase();
 
     emit(
       failureOrSuccess.fold(
-        (failure) => _LoadFailure(failure),
-        (reviewers) => _LoadSuccess(reviewers),
+        (failure) => LoadFailure(failure),
+        (reviewers) => LoadSuccess(reviewers),
       ),
     );
   }
