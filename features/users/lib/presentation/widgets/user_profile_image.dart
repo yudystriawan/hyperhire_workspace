@@ -17,7 +17,7 @@ class UserProfileImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image(
-      image: AssetImage('assets/images/$url', package: 'products'),
+      image: AssetImage('assets/images/$url', package: 'users'),
       fit: fit,
       height: height,
       width: width,

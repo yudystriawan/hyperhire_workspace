@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
+import 'package:users/users.dart';
 
 class ReviewerListItemWidget extends StatelessWidget {
   const ReviewerListItemWidget({
@@ -29,6 +30,7 @@ class ReviewerListItemWidget extends StatelessWidget {
                 width: topReviewer ? 4.w : 1.w,
               ),
             ),
+            child: UserProfileImage(url: reviewer.user.profileImageUrl),
           ),
           SizedBox(height: 10.w),
           Text(

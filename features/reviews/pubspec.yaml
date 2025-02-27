@@ -19,6 +19,7 @@ dependencies:
   ui: ^0.0.1
   products: ^0.0.1
   databases: ^0.0.1
+  users: ^0.0.1
 
 dev_dependencies:
   flutter_test:
