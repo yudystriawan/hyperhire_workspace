@@ -25,10 +25,7 @@ class ReviewerListItemWidget extends StatelessWidget {
             height: 62.w,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(
-                color: topReviewer ? Color(0xffFFD233) : Colors.transparent,
-                width: topReviewer ? 4.w : 1.w,
-              ),
+              border: Border.all(color: Colors.transparent, width: 1.w),
             ),
             child: UserProfileImage(url: reviewer.user.profileImageUrl),
           ),
