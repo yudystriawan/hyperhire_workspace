@@ -17,9 +17,10 @@ class ReviewDatasourceImpl implements ReviewDatasource {
   Future<List<ReviewerDto>> getTop10Reviewers() async {
     try {
       final data = await _db.load('reviewers.json');
-      return (data['data'] as List)
-          .map((e) => ReviewerDto.fromJson(e))
-          .toList();
+      final reviewers =
+          (data['data'] as List).map((e) => ReviewerDto.fromJson(e)).toList();
+      reviewers.sort((a, b) => b.reviewCount.compareTo(a.reviewCount));
+      return reviewers;
     } catch (e) {
       rethrow;
     }
