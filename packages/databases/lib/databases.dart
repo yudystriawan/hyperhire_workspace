@@ -1,6 +1,7 @@
-import 'package:databases/databases.dart';
-import 'package:path_provider/path_provider.dart';
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 
 export 'package:isar/isar.dart';
 
-part 'src/isardb.dart';
+part 'src/asset_loader.dart';
