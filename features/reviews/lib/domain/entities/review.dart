@@ -21,6 +21,7 @@ abstract class Reviewer with _$Reviewer {
     required String userId,
     required String content,
     required KtList<String> imageUrls,
+    required int reviewCount,
   }) = _Reviewer;
 }
 

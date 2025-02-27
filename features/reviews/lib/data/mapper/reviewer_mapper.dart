@@ -11,6 +11,7 @@ class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
       userId: model.userId,
       content: model.content,
       imageUrls: model.imageUrls.toImmutableList(),
+      reviewCount: model.reviewCount,
     );
   }
 
@@ -20,6 +21,7 @@ class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
       userId: entity.userId,
       content: entity.content,
       imageUrls: entity.imageUrls.asList(),
+      reviewCount: entity.reviewCount,
     );
   }
 }

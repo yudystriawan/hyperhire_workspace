@@ -9,6 +9,7 @@ abstract class ReviewerDto with _$ReviewerDto {
     required String userId,
     required String content,
     required List<String> imageUrls,
+    required int reviewCount,
   }) = _ReviewerDto;
 
   factory ReviewerDto.fromJson(Map<String, dynamic> json) =>

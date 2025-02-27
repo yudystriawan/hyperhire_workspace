@@ -1,8 +1,10 @@
 import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:reviews/reviews.dart';
 
+@injectable
 class GetTop10ReviewersUsecase
     implements NoParamsUsecase<ReviewFailure, KtList<Reviewer>> {
   final ReviewRepository _repository;
