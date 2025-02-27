@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "imageUrl": "img_profile_1.png",
+            "name": "Name01",
+            "tier": "gold",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "2",
+            "imageUrl": "img_profile_2.png",
+            "name": "Name02",
+            "tier": "silver",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "3",
+            "imageUrl": "img_profile_3.png",
+            "name": "Name03",
+            "tier": "bronze",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "4",
+            "imageUrl": "img_profile_4.png",
+            "name": "Name04",
+            "tier": "gold",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "5",
+            "imageUrl": "img_profile_5.png",
+            "name": "Name05",
+            "tier": "silver",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "6",
+            "imageUrl": "img_profile_6.png",
+            "name": "Name06",
+            "tier": "bronze",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "7",
+            "imageUrl": "img_profile_7.png",
+            "name": "Name07",
+            "tier": "gold",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "8",
+            "imageUrl": "img_profile_8.png",
+            "name": "Name08",
+            "tier": "silver",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "9",
+            "imageUrl": "img_profile_9.png",
+            "name": "Name09",
+            "tier": "bronze",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        },
+        {
+            "id": "10",
+            "imageUrl": "img_profile_10.png",
+            "name": "Name10",
+            "tier": "gold",
+            "description": "조립컴 업체를 운영하며 리뷰를 작성합니다."
+        }
+    ]
+}
