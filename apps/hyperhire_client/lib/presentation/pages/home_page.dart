@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:banners/banners.dart';
 import 'package:flutter/material.dart';
 import 'package:reviews/presentation/widgets/top_products_widget.dart';
+import 'package:ui/ui.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -13,7 +14,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: Text('LOGO')),
       backgroundColor: Color(0xffc8c8c8),
       body: SingleChildScrollView(
-        child: Column(children: [BannerCarousel(), TopProductsWidget()]),
+        child: Column(
+          children: [
+            BannerCarousel(),
+            TopProductsWidget(),
+            SizedBox(height: 14.w),
+          ],
+        ),
       ),
     );
   }
