@@ -1,1 +1,1 @@
-
+export 'domain/domain.dart';
