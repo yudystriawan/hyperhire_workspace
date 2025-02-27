@@ -1,3 +1,4 @@
+import 'package:databases/databases.dart';
 import 'package:injectable/injectable.dart';
 import 'package:reviews/reviews.dart';
 
@@ -8,10 +9,14 @@ abstract class ReviewDatasource {
 
 @Injectable(as: ReviewDatasource)
 class ReviewDatasourceImpl implements ReviewDatasource {
+  final LocalAssetLoader _db;
+
+  ReviewDatasourceImpl(this._db);
+
   @override
-  Future<List<ReviewerDto>> getTop10Reviewers() {
-    // TODO: implement getTop10Reviewers
-    throw UnimplementedError();
+  Future<List<ReviewerDto>> getTop10Reviewers() async {
+    final data = await _db.load('reviewers.json');
+    return (data['data'] as List).map((e) => ReviewerDto.fromJson(e)).toList();
   }
 
   @override

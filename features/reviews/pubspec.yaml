@@ -18,6 +18,7 @@ dependencies:
   flutter_bloc: ^9.0.0
   ui: ^0.0.1
   products: ^0.0.1
+  databases: ^0.0.1
 
 dev_dependencies:
   flutter_test:
