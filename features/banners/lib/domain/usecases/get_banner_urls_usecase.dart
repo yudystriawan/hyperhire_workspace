@@ -5,7 +5,8 @@ import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 
 @injectable
-class GetBannerUrlsUsecase implements Usecase<BannerFailure, KtList<String>> {
+class GetBannerUrlsUsecase
+    implements NoParamsUsecase<BannerFailure, KtList<String>> {
   final BannerRepository _repository;
 
   GetBannerUrlsUsecase(this._repository);
