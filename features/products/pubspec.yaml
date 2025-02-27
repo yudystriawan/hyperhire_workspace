@@ -13,6 +13,7 @@ dependencies:
   core: ^0.0.1
   dartz: ^0.10.1
   injectable: ^2.5.0
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +22,4 @@ dev_dependencies:
   freezed: ^3.0.0
   build_runner: ^2.4.15
   injectable_generator: ^2.7.0
+  json_serializable: ^6.9.4
