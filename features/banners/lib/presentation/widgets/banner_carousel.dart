@@ -14,7 +14,6 @@ class BannerCarousel extends StatelessWidget {
           (context) =>
               getIt<BannersLoaderBloc>()..add(BannersLoaderEvent.fetched()),
       child: SizedBox(
-        width: 360.w,
         height: 221.w,
         child: BlocBuilder<BannersLoaderBloc, BannersLoaderState>(
           builder: (context, state) {
@@ -93,10 +92,12 @@ class _CarouselWidgetState extends State<_CarouselWidget>
       itemCount: widget.urls.length,
       itemBuilder: (context, index) {
         return Image(
+          height: 221.w,
           image: AssetImage(
             'assets/images/${widget.urls[index]}',
             package: 'banners',
           ),
+          fit: BoxFit.fitHeight,
         );
       },
     );
