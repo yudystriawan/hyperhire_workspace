@@ -7,14 +7,18 @@ class TopProductsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 46.w,
+    return Container(
+      height: 466.w,
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [Text('제일 핫한 리뷰를 만나보세요'), Text('리뷰️  랭킹⭐ top 3')],
                 ),
               ),

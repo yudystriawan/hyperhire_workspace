@@ -11,17 +11,21 @@ class ReviewListItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: 106.w),
+      constraints: BoxConstraints(minHeight: 106.w),
       child: Row(
         children: [
           Container(
             width: 104.w,
             height: 104.w,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(4.r)),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4.r),
+              border: Border.all(color: Colors.grey),
+            ),
           ),
           SizedBox(width: 8.w),
           Expanded(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(review.product.name, overflow: TextOverflow.ellipsis),
                 ...review.reviewers
@@ -34,6 +38,7 @@ class ReviewListItemWidget extends StatelessWidget {
                     .asList(),
                 SizedBox(height: 6.w),
                 Row(
+                  spacing: 4.w,
                   children: [
                     Icon(Icons.star, color: Colors.yellow),
                     Text(
@@ -50,12 +55,21 @@ class ReviewListItemWidget extends StatelessWidget {
                       review.keywords
                           .map(
                             (keyword) => Container(
-                              height: 21.w,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6.r),
                                 color: Color(0xfff0f0f0),
                               ),
-                              child: Text(keyword),
+                              padding: EdgeInsets.symmetric(
+                                vertical: 5.w,
+                                horizontal: 6.w,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  keyword,
+                                  style: TextStyle(fontSize: 11.sp),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
                             ),
                           )
                           .asList(),

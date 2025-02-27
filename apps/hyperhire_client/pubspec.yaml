@@ -11,6 +11,7 @@ dependencies:
   core: ^0.0.1
   ui: ^0.0.1
   products: ^0.0.1
+  reviews: ^0.0.1
   auto_route: ^9.3.0+1
   flutter:
     sdk: flutter
