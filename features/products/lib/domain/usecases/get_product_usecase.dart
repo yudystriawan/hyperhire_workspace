@@ -1,7 +1,9 @@
 import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:products/products.dart';
 
+@injectable
 class GetProductUsecase implements Usecase<ProductFailure, Product, String> {
   final ProductRepository _repository;
 
