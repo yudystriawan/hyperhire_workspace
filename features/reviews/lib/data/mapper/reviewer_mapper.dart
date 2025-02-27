@@ -5,10 +5,14 @@ import 'package:reviews/reviews.dart';
 
 @injectable
 class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
+  final UserReviewMapper _userReviewMapper;
+
+  ReviewerMapper(this._userReviewMapper);
+
   @override
   Reviewer mapToEntity(ReviewerDto model) {
     return Reviewer(
-      userId: model.userId,
+      user: _userReviewMapper.mapToEntity(model.user),
       content: model.content,
       imageUrls: model.imageUrls.toImmutableList(),
       reviewCount: model.reviewCount,
@@ -18,7 +22,7 @@ class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
   @override
   ReviewerDto mapToModel(Reviewer entity) {
     return ReviewerDto(
-      userId: entity.userId,
+      user: _userReviewMapper.mapToModel(entity.user),
       content: entity.content,
       imageUrls: entity.imageUrls.asList(),
       reviewCount: entity.reviewCount,

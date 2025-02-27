@@ -1,7 +1,11 @@
 {
     "data": [
         {
-            "userId": "1",
+            "user": {
+                "id": "1",
+                "name": "Name01",
+                "profileImageUrl": "img_profile_1.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -11,7 +15,11 @@
             "reviewCount": 100
         },
         {
-            "userId": "2",
+            "user": {
+                "id": "2",
+                "name": "Name02",
+                "profileImageUrl": "img_profile_2.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -21,7 +29,11 @@
             "reviewCount": 90
         },
         {
-            "userId": "3",
+            "user": {
+                "id": "3",
+                "name": "Name03",
+                "profileImageUrl": "img_profile_3.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -31,7 +43,11 @@
             "reviewCount": 80
         },
         {
-            "userId": "4",
+            "user": {
+                "id": "4",
+                "name": "Name04",
+                "profileImageUrl": "img_profile_4.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -41,7 +57,11 @@
             "reviewCount": 70
         },
         {
-            "userId": "5",
+            "user": {
+                "id": "5",
+                "name": "Name05",
+                "profileImageUrl": "img_profile_5.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -51,7 +71,11 @@
             "reviewCount": 60
         },
         {
-            "userId": "6",
+            "user": {
+                "id": "6",
+                "name": "Name06",
+                "profileImageUrl": "img_profile_6.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -61,7 +85,11 @@
             "reviewCount": 50
         },
         {
-            "userId": "7",
+            "user": {
+                "id": "7",
+                "name": "Name07",
+                "profileImageUrl": "img_profile_7.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -71,7 +99,11 @@
             "reviewCount": 40
         },
         {
-            "userId": "8",
+            "user": {
+                "id": "8",
+                "name": "Name08",
+                "profileImageUrl": "img_profile_8.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -81,7 +113,11 @@
             "reviewCount": 30
         },
         {
-            "userId": "9",
+            "user": {
+                "id": "9",
+                "name": "Name09",
+                "profileImageUrl": "img_profile_9.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",
@@ -91,7 +127,11 @@
             "reviewCount": 20
         },
         {
-            "userId": "10",
+            "user": {
+                "id": "10",
+                "name": "Name10",
+                "profileImageUrl": "img_profile_10.png"
+            },
             "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
             "imageUrls": [
                 "img_review_1.png",

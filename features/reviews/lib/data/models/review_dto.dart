@@ -6,7 +6,7 @@ part 'review_dto.g.dart';
 @freezed
 abstract class ReviewerDto with _$ReviewerDto {
   const factory ReviewerDto({
-    required String userId,
+    required UserReviewDto user,
     required String content,
     required List<String> imageUrls,
     required int reviewCount,
@@ -41,4 +41,16 @@ abstract class ProductReviewDto with _$ProductReviewDto {
 
   factory ProductReviewDto.fromJson(Map<String, dynamic> json) =>
       _$ProductReviewDtoFromJson(json);
+}
+
+@freezed
+abstract class UserReviewDto with _$UserReviewDto {
+  const factory UserReviewDto({
+    required String id,
+    required String name,
+    required String profileImageUrl,
+  }) = _UserReviewDto;
+
+  factory UserReviewDto.fromJson(Map<String, dynamic> json) =>
+      _$UserReviewDtoFromJson(json);
 }

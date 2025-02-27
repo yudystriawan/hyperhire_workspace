@@ -18,7 +18,7 @@ abstract class Review with _$Review {
 @freezed
 abstract class Reviewer with _$Reviewer {
   const factory Reviewer({
-    required String userId,
+    required UserReview user,
     required String content,
     required KtList<String> imageUrls,
     required int reviewCount,
@@ -32,4 +32,13 @@ abstract class ProductReview with _$ProductReview {
     required String name,
     required String imageUrl,
   }) = _ProductReview;
+}
+
+@freezed
+abstract class UserReview with _$UserReview {
+  const factory UserReview({
+    required String id,
+    required String name,
+    required String profileImageUrl,
+  }) = _UserReview;
 }
