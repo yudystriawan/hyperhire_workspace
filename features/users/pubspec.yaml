@@ -13,6 +13,8 @@ dependencies:
   injectable: ^2.5.0
   json_annotation: ^4.9.0
   core: ^0.0.1
+  dartz: ^0.10.1
+  kt_dart: ^1.1.0
 
 dev_dependencies:
   flutter_test:
