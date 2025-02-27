@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('LOGO')),
+      backgroundColor: Color(0xffc8c8c8),
       body: SingleChildScrollView(
         child: Column(
           children: [
