@@ -10,7 +10,7 @@ class TopProductsWidget extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(minHeight: 466.w),
       color: Colors.white,
-      padding: EdgeInsets.all(16.w),
+      padding: EdgeInsets.all(16.w).copyWith(top: 28.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
