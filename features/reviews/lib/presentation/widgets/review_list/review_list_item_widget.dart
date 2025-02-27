@@ -94,28 +94,7 @@ class ReviewListItemWidget extends StatelessWidget {
                   spacing: 4.w,
                   children:
                       review.keywords
-                          .map(
-                            (keyword) => Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(6.r),
-                                color: Color(0xfff0f0f0),
-                              ),
-                              padding: EdgeInsets.symmetric(
-                                vertical: 5.w,
-                                horizontal: 6.w,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  keyword,
-                                  style: TextStyle(
-                                    fontSize: 11.sp,
-                                    color: Color(0xff868686),
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ),
-                          )
+                          .map((keyword) => AppChip(label: keyword))
                           .asList(),
                 ),
               ],
