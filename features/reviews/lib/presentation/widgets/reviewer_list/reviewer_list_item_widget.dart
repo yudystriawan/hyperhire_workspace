@@ -32,7 +32,7 @@ class ReviewerListItemWidget extends StatelessWidget {
           ),
           SizedBox(height: 10.w),
           Text(
-            'Name',
+            reviewer.user.name,
             style: TextStyle(fontSize: 14.sp, color: Color(0xff616161)),
           ),
         ],
