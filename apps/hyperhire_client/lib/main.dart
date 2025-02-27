@@ -28,7 +28,10 @@ class _MainAppState extends State<MainApp> {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp.router(routerConfig: _appRouter.config());
+        return MaterialApp.router(
+          routerConfig: _appRouter.config(),
+          theme: ThemeData(textTheme: GoogleFonts.notoSansKrTextTheme()),
+        );
       },
     );
   }
