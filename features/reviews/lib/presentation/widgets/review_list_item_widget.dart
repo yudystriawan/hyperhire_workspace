@@ -49,12 +49,20 @@ class ReviewListItemWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(review.product.name, overflow: TextOverflow.ellipsis),
+                Text(
+                  review.product.name,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
                 ...review.reviewers
                     .map(
                       (reviewer) => Text(
                         '• ${reviewer.content}',
                         overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 11.sp),
                       ),
                     )
                     .asList(),
@@ -62,12 +70,23 @@ class ReviewListItemWidget extends StatelessWidget {
                 Row(
                   spacing: 4.w,
                   children: [
-                    Icon(Icons.star, color: Colors.yellow),
+                    Icon(Icons.star, color: Color(0xffffd233), size: 10.w),
                     Text(
                       review.rating.toString(),
-                      style: TextStyle(color: Colors.yellow),
+                      style: TextStyle(
+                        color: Color(0xffffd233),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 10.sp,
+                      ),
                     ),
-                    Text('(${review.reviewCount})'),
+                    Text(
+                      '(${review.reviewCount})',
+                      style: TextStyle(
+                        color: Color(0xffc4c4c4),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 10.sp,
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(height: 6.w),
@@ -88,7 +107,10 @@ class ReviewListItemWidget extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   keyword,
-                                  style: TextStyle(fontSize: 11.sp),
+                                  style: TextStyle(
+                                    fontSize: 11.sp,
+                                    color: Color(0xff868686),
+                                  ),
                                   textAlign: TextAlign.center,
                                 ),
                               ),
