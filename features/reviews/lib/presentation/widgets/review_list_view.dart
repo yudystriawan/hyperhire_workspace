@@ -40,12 +40,26 @@ class ReviewListView extends StatelessWidget {
               spacing: 16.w,
               children:
                   state.reviews
-                      .map((review) => ReviewListItemWidget(review: review))
+                      .mapIndexed(
+                        (index, review) => ReviewListItemWidget(
+                          review: review,
+                          crownAsset: _mapCrownAsset(index),
+                        ),
+                      )
                       .asList(),
             ),
           };
         },
       ),
     );
+  }
+
+  String _mapCrownAsset(int index) {
+    return switch (index) {
+      0 => 'ic_crown_gold.png',
+      1 => 'ic_crown_silver.png',
+      2 => 'ic_crown_bronze.png',
+      _ => 'ic_crown_default.png',
+    };
   }
 }

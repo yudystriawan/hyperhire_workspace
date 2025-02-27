@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:kt_dart/collection.dart';
+import 'package:products/presentation/widgets/product_image_widget.dart';
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
 
 class ReviewListItemWidget extends StatelessWidget {
-  const ReviewListItemWidget({super.key, required this.review});
+  const ReviewListItemWidget({
+    super.key,
+    required this.review,
+    required this.crownAsset,
+  });
 
   final Review review;
+  final String crownAsset;
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +20,29 @@ class ReviewListItemWidget extends StatelessWidget {
       constraints: BoxConstraints(minHeight: 106.w),
       child: Row(
         children: [
-          Container(
-            width: 104.w,
-            height: 104.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(4.r),
-              border: Border.all(color: Colors.grey),
-            ),
+          Stack(
+            children: [
+              Container(
+                width: 104.w,
+                height: 104.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4.r),
+                  border: Border.all(color: Colors.grey),
+                  color: Colors.white,
+                ),
+                child: ProductImageWidget(url: review.product.imageUrl),
+              ),
+              Positioned(
+                top: 6.w,
+                left: 6.w,
+                child: Image(
+                  image: AssetImage(
+                    'assets/icons/$crownAsset',
+                    package: 'reviews',
+                  ),
+                ),
+              ),
+            ],
           ),
           SizedBox(width: 8.w),
           Expanded(

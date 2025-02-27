@@ -8,8 +8,9 @@ class TopProductsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 466.w,
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      constraints: BoxConstraints(minHeight: 466.w),
+      color: Colors.white,
+      padding: EdgeInsets.all(16.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
