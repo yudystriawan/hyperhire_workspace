@@ -16,6 +16,7 @@ dependencies:
   dartz: ^0.10.1
   kt_dart: ^1.1.0
   databases: ^0.0.1
+  flutter_bloc: ^9.0.0
 
 dev_dependencies:
   flutter_test:
