@@ -13,21 +13,21 @@ class TopProductsLoaderBloc
     extends Bloc<TopProductsLoaderEvent, TopProductsLoaderState> {
   final GetTop3ProductsUsecase _getTop3ProductsUsecase;
 
-  TopProductsLoaderBloc(this._getTop3ProductsUsecase) : super(_Initial()) {
+  TopProductsLoaderBloc(this._getTop3ProductsUsecase) : super(Initial()) {
     on<_Fetched>(_onFetched);
   }
 
   void _onFetched(_Fetched event, Emitter<TopProductsLoaderState> emit) async {
-    if (state == _LoadInProgress()) return;
+    if (state == LoadInProgress()) return;
 
-    emit(_LoadInProgress());
+    emit(LoadInProgress());
 
     final failureOrSuccess = await _getTop3ProductsUsecase();
 
     emit(
       failureOrSuccess.fold(
-        (failure) => _LoadFailure(failure),
-        (products) => _LoadSuccess(products),
+        (failure) => LoadFailure(failure),
+        (products) => LoadSuccess(products),
       ),
     );
   }
