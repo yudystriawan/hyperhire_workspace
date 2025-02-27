@@ -10,7 +10,7 @@ class TopReviewersWidget extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(minHeight: 220.w),
       color: Colors.white,
-      padding: EdgeInsets.all(16.w).copyWith(top: 28.w),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 18.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

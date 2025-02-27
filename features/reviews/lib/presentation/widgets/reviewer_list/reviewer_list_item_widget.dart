@@ -19,9 +19,22 @@ class ReviewerListItemWidget extends StatelessWidget {
       height: 106.w,
       child: Column(
         children: [
-          Container(decoration: BoxDecoration(shape: BoxShape.circle)),
+          Container(
+            width: 62.w,
+            height: 62.w,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: topReviewer ? Color(0xffFFD233) : Colors.transparent,
+                width: topReviewer ? 4.w : 1.w,
+              ),
+            ),
+          ),
           SizedBox(height: 10.w),
-          Text('Name', style: TextStyle(fontSize: 14.sp)),
+          Text(
+            'Name',
+            style: TextStyle(fontSize: 14.sp, color: Color(0xff616161)),
+          ),
         ],
       ),
     );
