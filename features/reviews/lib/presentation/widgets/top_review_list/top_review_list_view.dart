@@ -37,42 +37,38 @@ class TopReviewListView extends StatelessWidget {
                 ],
               ),
             ),
-            LoadSuccess() => Column(
-              children: [
-                if (state.reviews.isEmpty())
-                  SizedBox()
-                else ...[
-                  Container(
-                    constraints: BoxConstraints(minHeight: 466.w),
-                    color: Colors.white,
-                    padding: EdgeInsets.all(16.w).copyWith(top: 28.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '제일 핫한 리뷰를 만나보세요',
-                                style: TextStyle(
-                                  fontSize: 12.sp,
-                                  color: Color(0xff616161),
-                                ),
+            LoadSuccess() => Container(
+              constraints: BoxConstraints(minHeight: 466.w),
+              color: Colors.white,
+              padding: EdgeInsets.all(16.w).copyWith(top: 28.w),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '제일 핫한 리뷰를 만나보세요',
+                              style: TextStyle(
+                                fontSize: 12.sp,
+                                color: Color(0xff616161),
                               ),
-                              Text(
-                                '리뷰️  랭킹⭐ top 3',
-                                style: TextStyle(fontSize: 18.sp),
-                              ),
-                            ],
-                          ),
+                            ),
+                            Text(
+                              '리뷰️  랭킹⭐ top 3',
+                              style: TextStyle(fontSize: 18.sp),
+                            ),
+                          ],
                         ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.arrow_forward_ios),
-                        ),
-                      ],
-                    ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.arrow_forward_ios),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 18.w),
                   ...state.reviews
@@ -84,7 +80,7 @@ class TopReviewListView extends StatelessWidget {
                       )
                       .asList(),
                 ],
-              ],
+              ),
             ),
           };
         },
