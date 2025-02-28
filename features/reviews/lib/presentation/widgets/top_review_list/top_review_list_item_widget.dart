@@ -3,7 +3,6 @@ import 'package:kt_dart/collection.dart';
 import 'package:products/presentation/widgets/product_image_widget.dart';
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
-import 'package:ui/widgets/icon.dart';
 
 class TopReviewListItemWidget extends StatelessWidget {
   const TopReviewListItemWidget({
