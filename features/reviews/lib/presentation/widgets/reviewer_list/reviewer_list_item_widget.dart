@@ -8,33 +8,38 @@ class ReviewerListItemWidget extends StatelessWidget {
     super.key,
     required this.reviewer,
     this.topReviewer = false,
+    this.onTap,
   });
 
   final Reviewer reviewer;
   final bool topReviewer;
+  final Function(String userId)? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 62.w,
-      height: 106.w,
-      child: Column(
-        children: [
-          Container(
-            width: 62.w,
-            height: 62.w,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: Colors.transparent, width: 1.w),
+    return GestureDetector(
+      onTap: onTap != null ? () => onTap!(reviewer.user.id) : null,
+      child: SizedBox(
+        width: 62.w,
+        height: 106.w,
+        child: Column(
+          children: [
+            Container(
+              width: 62.w,
+              height: 62.w,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.transparent, width: 1.w),
+              ),
+              child: UserProfileImage(url: reviewer.user.profileImageUrl),
             ),
-            child: UserProfileImage(url: reviewer.user.profileImageUrl),
-          ),
-          SizedBox(height: 10.w),
-          Text(
-            reviewer.user.name,
-            style: TextStyle(fontSize: 14.sp, color: Color(0xff616161)),
-          ),
-        ],
+            SizedBox(height: 10.w),
+            Text(
+              reviewer.user.name,
+              style: TextStyle(fontSize: 14.sp, color: Color(0xff616161)),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -3,7 +3,9 @@ import 'package:reviews/presentation/widgets/reviewer_list/reviewer_list_view.da
 import 'package:ui/ui.dart';
 
 class TopReviewersWidget extends StatelessWidget {
-  const TopReviewersWidget({super.key});
+  const TopReviewersWidget({super.key, this.onUserTapped});
+
+  final Function(String userId)? onUserTapped;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class TopReviewersWidget extends StatelessWidget {
             ],
           ),
           SizedBox(height: 18.w),
-          ReviewerListView(),
+          ReviewerListView(onUserTapped: onUserTapped),
         ],
       ),
     );

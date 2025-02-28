@@ -12,10 +12,13 @@ dependencies:
   ui: ^0.0.1
   products: ^0.0.1
   reviews: ^0.0.1
+  users: ^0.0.1
   auto_route: ^9.3.0+1
   flutter:
     sdk: flutter
   injectable: ^2.5.0
+  databases: ^0.0.1
+  flutter_bloc: ^9.0.0
 
 dev_dependencies:
   flutter_test:

@@ -7,7 +7,9 @@ import 'package:reviews/presentation/widgets/reviewer_list/reviewer_list_item_wi
 import 'package:ui/ui.dart';
 
 class ReviewerListView extends StatelessWidget {
-  const ReviewerListView({super.key});
+  const ReviewerListView({super.key, this.onUserTapped});
+
+  final Function(String userId)? onUserTapped;
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +49,7 @@ class ReviewerListView extends StatelessWidget {
                           (index, reviewer) => ReviewerListItemWidget(
                             reviewer: reviewer,
                             topReviewer: index == 0,
+                            onTap: onUserTapped,
                           ),
                         )
                         .asList(),
