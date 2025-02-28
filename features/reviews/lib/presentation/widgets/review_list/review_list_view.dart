@@ -38,24 +38,56 @@ class ReviewListView extends StatelessWidget {
                       bottom: BorderSide(color: Color(0xffe0e0e0), width: 1.w),
                     ),
                   ),
-                  child: RichText(
-                    text: TextSpan(
-                      text: '작성한 리뷰 ',
-                      style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: '총 ${state.reviews.size}개',
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            color: Color(0xff616161),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: RichText(
+                          text: TextSpan(
+                            text: '작성한 리뷰 ',
+                            style: TextStyle(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: '총 ${state.reviews.size}개',
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                  color: Color(0xff616161),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 7.w,
+                          vertical: 4.w,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xff868686),
+                            width: 1.w,
+                          ),
+                          borderRadius: BorderRadius.circular(23.w / 2),
+                        ),
+                        child: Row(
+                          children: [
+                            Text(
+                              '리뷰순',
+                              style: TextStyle(
+                                fontSize: 12.sp,
+                                color: Color(0xff868686),
+                              ),
+                            ),
+                            SizedBox(width: 4.w),
+                            Icon(Icons.arrow_drop_down, size: 16.w),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: 5.w),
