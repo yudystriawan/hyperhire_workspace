@@ -30,7 +30,16 @@ class _MainAppState extends State<MainApp> {
       builder: (context, child) {
         return MaterialApp.router(
           routerConfig: _appRouter.config(),
-          theme: ThemeData(textTheme: GoogleFonts.notoSansKrTextTheme()),
+          theme: ThemeData(
+            scaffoldBackgroundColor: Color(0xffF0F0F0),
+            appBarTheme: AppBarTheme(
+              elevation: 2.w,
+              color: Colors.white,
+              surfaceTintColor: Colors.white,
+              shadowColor: Colors.black,
+            ),
+            textTheme: GoogleFonts.notoSansKrTextTheme(),
+          ),
         );
       },
     );
