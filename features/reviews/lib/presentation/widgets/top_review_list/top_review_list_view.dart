@@ -90,9 +90,9 @@ class TopReviewListView extends StatelessWidget {
 
   String _mapCrownAsset(int index) {
     return switch (index) {
-      0 => 'ic_crown_gold.png',
-      1 => 'ic_crown_silver.png',
-      2 => 'ic_crown_bronze.png',
+      0 => AppIcons.icCrownFirst,
+      1 => AppIcons.icCrownSecond,
+      2 => AppIcons.icCrownThird,
       _ => 'ic_crown_default.png',
     };
   }

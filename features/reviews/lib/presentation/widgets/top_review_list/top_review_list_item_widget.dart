@@ -3,6 +3,7 @@ import 'package:kt_dart/collection.dart';
 import 'package:products/presentation/widgets/product_image_widget.dart';
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
+import 'package:ui/widgets/icon.dart';
 
 class TopReviewListItemWidget extends StatelessWidget {
   const TopReviewListItemWidget({
@@ -35,12 +36,7 @@ class TopReviewListItemWidget extends StatelessWidget {
               Positioned(
                 top: 6.w,
                 left: 6.w,
-                child: Image(
-                  image: AssetImage(
-                    'assets/icons/$crownAsset',
-                    package: 'reviews',
-                  ),
-                ),
+                child: AppIcon(crownAsset, size: 15.w),
               ),
             ],
           ),
@@ -70,7 +66,7 @@ class TopReviewListItemWidget extends StatelessWidget {
                 Row(
                   spacing: 4.w,
                   children: [
-                    Icon(Icons.star, color: Color(0xffffd233), size: 10.w),
+                    AppIcon(AppIcons.icStarFilled, size: 10.w),
                     Text(
                       review.rating.toString(),
                       style: TextStyle(

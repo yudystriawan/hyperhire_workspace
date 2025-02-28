@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ui/ui.dart';
 
 class StarScore extends StatelessWidget {
   final double score;
@@ -22,22 +22,13 @@ class StarScore extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: List.generate(starCount, (index) {
-        IconData icon;
+        String icon;
         if (index < score.floor()) {
-          icon = Icons.star;
-        } else if (index < score && (score - index) >= 0.5) {
-          icon = Icons.star_half;
+          icon = AppIcons.icStarFilled;
         } else {
-          icon = Icons.star_border;
+          icon = AppIcons.icStarOutlined;
         }
-        return Icon(
-          icon,
-          color:
-              index < score
-                  ? (filledStarColor ?? Color(0xffFFD233))
-                  : (unfilledStarColor ?? Color(0xffF0F0F0)),
-          size: starSize ?? 24.w,
-        );
+        return AppIcon(icon, size: starSize ?? 24.w);
       }),
     );
   }

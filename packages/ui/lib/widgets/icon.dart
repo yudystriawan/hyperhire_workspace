@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AppIcon extends StatelessWidget {
-  const AppIcon({super.key, required this.path, this.size});
+  const AppIcon(this.path, {super.key, this.size});
 
   final String path;
   final double? size;
