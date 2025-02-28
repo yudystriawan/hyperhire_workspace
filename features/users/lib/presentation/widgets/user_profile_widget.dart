@@ -46,12 +46,19 @@ class UserProfileWidget extends StatelessWidget {
                     SizedBox(height: 12.w),
                     Text(state.user.name, style: TextStyle(fontSize: 20.sp)),
                     SizedBox(height: 2.w),
-                    Text(
-                      state.user.tier.name,
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Color(0xffFFD233),
-                      ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      spacing: 4.w,
+                      children: [
+                        AppIcon(AppIcons.icCrownGold, size: 15.w),
+                        Text(
+                          state.user.tier.name,
+                          style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Color(0xffFFD233),
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(height: 18.w),
                     AppChip(label: state.user.description),

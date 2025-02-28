@@ -97,7 +97,7 @@ class ReviewListItemWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 6.w),
-              Icon(Icons.bookmark_border, size: 24.w),
+              AppIcon(AppIcons.icBookmarkOutlined),
             ],
           ),
           SizedBox(height: 27.w),

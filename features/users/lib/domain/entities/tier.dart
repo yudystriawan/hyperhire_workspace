@@ -12,9 +12,9 @@ sealed class UserTier with _$UserTier {
 extension UserTierX on UserTier {
   String get name {
     return switch (this) {
-      Bronze() => 'Bronze',
-      Silver() => 'Silver',
-      Gold() => 'Gold',
+      Gold() => '골드',
+      Bronze() => '브론즈',
+      Silver() => '실버',
     };
   }
 }

@@ -71,8 +71,8 @@
                 },
                 {
                     "user": {
-                        "id": "99",
-                        "name": "Name99",
+                        "id": "100",
+                        "name": "Name100",
                         "profileImageUrl": "img_profile_1.png",
                         "reviewCount": 35
                     },
@@ -102,8 +102,8 @@
             "reviewers": [
                 {
                     "user": {
-                        "id": "1",
-                        "name": "Name01",
+                        "id": "99",
+                        "name": "Name99",
                         "profileImageUrl": "img_profile_1.png",
                         "reviewCount": 1
                     },
@@ -117,7 +117,7 @@
                 },
                 {
                     "user": {
-                        "id": "2",
+                        "id": "100",
                         "name": "Name02",
                         "profileImageUrl": "img_profile_2.png",
                         "reviewCount": 1
@@ -148,7 +148,7 @@
             "reviewers": [
                 {
                     "user": {
-                        "id": "1",
+                        "id": "99",
                         "name": "Name01",
                         "profileImageUrl": "img_profile_1.png",
                         "reviewCount": 1
@@ -163,7 +163,7 @@
                 },
                 {
                     "user": {
-                        "id": "2",
+                        "id": "100",
                         "name": "Name02",
                         "profileImageUrl": "img_profile_2.png",
                         "reviewCount": 1
