@@ -19,4 +19,12 @@ class AppIcons {
   static const String icStarFilled = '$_assetPath/ic_star_filled.svg';
 
   static const String icStarOutlined = '$_assetPath/ic_star_outlined.svg';
+
+  static const String icCrownGold = '$_assetPath/ic_crown_gold.svg';
+
+  static const String icCrownFirst = '$_assetPath/ic_crown_first.svg';
+
+  static const String icCrownSecond = '$_assetPath/ic_crown_second.svg';
+
+  static const String icCrownThird = '$_assetPath/ic_crown_third.svg';
 }
