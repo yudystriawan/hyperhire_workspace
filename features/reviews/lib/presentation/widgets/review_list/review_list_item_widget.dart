@@ -127,13 +127,22 @@ class ReviewListItemWidget extends StatelessWidget {
             children:
                 reviewer.pros
                     .map(
-                      (content) => Text(
-                        content,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xff616161),
-                          fontWeight: FontWeight.w300,
-                        ),
+                      (content) => Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 10.w,
+                        children: [
+                          AppIcon(AppIcons.icLightningOn, size: 20.w),
+                          Expanded(
+                            child: Text(
+                              content,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff616161),
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     )
                     .asList(),
@@ -144,13 +153,22 @@ class ReviewListItemWidget extends StatelessWidget {
             children:
                 reviewer.cons
                     .map(
-                      (content) => Text(
-                        content,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xff616161),
-                          fontWeight: FontWeight.w300,
-                        ),
+                      (content) => Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 10.w,
+                        children: [
+                          AppIcon(AppIcons.icLightningOff, size: 20.w),
+                          Expanded(
+                            child: Text(
+                              content,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff616161),
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     )
                     .asList(),
