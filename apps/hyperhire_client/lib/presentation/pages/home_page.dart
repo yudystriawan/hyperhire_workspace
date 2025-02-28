@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:banners/banners.dart';
 import 'package:flutter/material.dart';
+import 'package:hyperhire_client/presentation/routes/routes.gr.dart';
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
 
@@ -19,7 +20,10 @@ class HomePage extends StatelessWidget {
             BannerCarousel(),
             TopProductsWidget(),
             SizedBox(height: 14.w),
-            TopReviewersWidget(),
+            TopReviewersWidget(
+              onUserTapped:
+                  (userId) => context.pushRoute(UserDetailRoute(id: userId)),
+            ),
           ],
         ),
       ),
