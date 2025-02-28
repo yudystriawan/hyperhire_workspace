@@ -4,8 +4,8 @@ import 'package:products/presentation/widgets/product_image_widget.dart';
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
 
-class ReviewListItemWidget extends StatelessWidget {
-  const ReviewListItemWidget({
+class TopReviewListItemWidget extends StatelessWidget {
+  const TopReviewListItemWidget({
     super.key,
     required this.review,
     required this.crownAsset,

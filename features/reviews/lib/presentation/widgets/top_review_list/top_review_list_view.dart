@@ -77,7 +77,7 @@ class TopReviewListView extends StatelessWidget {
                   SizedBox(height: 18.w),
                   ...state.reviews
                       .mapIndexed(
-                        (index, review) => ReviewListItemWidget(
+                        (index, review) => TopReviewListItemWidget(
                           review: review,
                           crownAsset: _mapCrownAsset(index),
                         ),
