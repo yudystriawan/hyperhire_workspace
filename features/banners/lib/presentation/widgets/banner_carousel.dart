@@ -91,13 +91,40 @@ class _CarouselWidgetState extends State<_CarouselWidget>
       controller: _pageController,
       itemCount: widget.urls.length,
       itemBuilder: (context, index) {
-        return Image(
-          height: 221.w,
-          image: AssetImage(
-            'assets/images/${widget.urls[index]}',
-            package: 'banners',
-          ),
-          fit: BoxFit.fitHeight,
+        return Stack(
+          children: [
+            Image(
+              height: 221.w,
+              image: AssetImage(
+                'assets/images/${widget.urls[index]}',
+                package: 'banners',
+              ),
+              fit: BoxFit.fitHeight,
+            ),
+            Positioned(
+              bottom: 10.0,
+              left: 0.0,
+              right: 0.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  widget.urls.length,
+                  (indicatorIndex) => Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                    width: _currentPage == indicatorIndex ? 12.w : 4.w,
+                    height: _currentPage == indicatorIndex ? 4.w : 4.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4.w),
+                      color:
+                          _currentPage == indicatorIndex
+                              ? Colors.white
+                              : Colors.white.withAlpha((0.5 * 255).toInt()),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         );
       },
     );
