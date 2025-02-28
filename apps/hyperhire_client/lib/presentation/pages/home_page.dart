@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             BannerCarousel(),
-            TopProductsWidget(),
+            TopReviewListView(),
             SizedBox(height: 14.w),
             TopReviewersWidget(
               onUserTapped:

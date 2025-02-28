@@ -6,8 +6,8 @@ import 'package:reviews/presentation/blocs/top_products_loader/top_products_load
 import 'package:reviews/reviews.dart';
 import 'package:ui/ui.dart';
 
-class ReviewListView extends StatelessWidget {
-  const ReviewListView({super.key});
+class TopReviewListView extends StatelessWidget {
+  const TopReviewListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +38,44 @@ class ReviewListView extends StatelessWidget {
               ),
             ),
             LoadSuccess() => Column(
-              spacing: 16.w,
-              children:
-                  state.reviews
+              children: [
+                if (state.reviews.isEmpty())
+                  SizedBox()
+                else ...[
+                  Container(
+                    constraints: BoxConstraints(minHeight: 466.w),
+                    color: Colors.white,
+                    padding: EdgeInsets.all(16.w).copyWith(top: 28.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '제일 핫한 리뷰를 만나보세요',
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                  color: Color(0xff616161),
+                                ),
+                              ),
+                              Text(
+                                '리뷰️  랭킹⭐ top 3',
+                                style: TextStyle(fontSize: 18.sp),
+                              ),
+                            ],
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.arrow_forward_ios),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 18.w),
+                  ...state.reviews
                       .mapIndexed(
                         (index, review) => ReviewListItemWidget(
                           review: review,
@@ -48,6 +83,8 @@ class ReviewListView extends StatelessWidget {
                         ),
                       )
                       .asList(),
+                ],
+              ],
             ),
           };
         },
