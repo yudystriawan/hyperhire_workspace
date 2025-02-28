@@ -5,6 +5,7 @@ import 'package:reviews/reviews.dart';
 abstract class ReviewDatasource {
   Future<List<ReviewDto>> getTop3Products();
   Future<List<ReviewerDto>> getTop10Reviewers();
+  Future<List<ReviewDto>> getReviewsByUserId(String userId);
 }
 
 @Injectable(as: ReviewDatasource)
@@ -31,6 +32,16 @@ class ReviewDatasourceImpl implements ReviewDatasource {
   @override
   Future<List<ReviewDto>> getTop3Products() {
     return Future.value(_reviews);
+  }
+
+  @override
+  Future<List<ReviewDto>> getReviewsByUserId(String userId) async {
+    final data = await _db.load('reviews.json');
+    final reviews =
+        (data['data'] as List).map((e) => ReviewDto.fromJson(e)).toList();
+    return reviews
+        .where((e) => e.reviewers.any((r) => r.user.id == userId))
+        .toList();
   }
 }
 

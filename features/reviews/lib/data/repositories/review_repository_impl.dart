@@ -38,4 +38,18 @@ class ReviewRepositoryImpl implements ReviewRepository {
       return left(const ReviewFailure.unexpectedError());
     }
   }
+
+  @override
+  Future<Either<ReviewFailure, KtList<Review>>> getReviewsByUserId(
+    String userId,
+  ) async {
+    try {
+      final result = await _datasource.getReviewsByUserId(userId);
+      return right(
+        result.map((dto) => _reviewMapper.mapToEntity(dto)).toImmutableList(),
+      );
+    } catch (e) {
+      return left(const ReviewFailure.unexpectedError());
+    }
+  }
 }

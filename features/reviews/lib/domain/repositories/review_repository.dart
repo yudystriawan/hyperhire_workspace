@@ -5,4 +5,7 @@ import 'package:reviews/reviews.dart';
 abstract class ReviewRepository {
   Future<Either<ReviewFailure, KtList<Review>>> getTop3Products();
   Future<Either<ReviewFailure, KtList<Reviewer>>> getTop10Reviewers();
+  Future<Either<ReviewFailure, KtList<Review>>> getReviewsByUserId(
+    String userId,
+  );
 }
