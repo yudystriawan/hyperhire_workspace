@@ -30,7 +30,6 @@ class UserMapper implements Mapper<User, UserDto> {
         Bronze() => 'bronze',
         Silver() => 'silver',
         Gold() => 'gold',
-        _ => throw Exception('Invalid tier'),
       },
       description: entity.description,
     );
