@@ -5,6 +5,8 @@ part 'review.freezed.dart';
 
 @freezed
 abstract class Review with _$Review {
+  const Review._();
+
   const factory Review({
     required String id,
     required double rating,
@@ -13,15 +15,20 @@ abstract class Review with _$Review {
     required KtList<String> keywords,
     required KtList<Reviewer> reviewers,
   }) = _Review;
+
+  KtList<String> get getAllReviewContent =>
+      reviewers.flatMap((reviewer) => reviewer.pros + reviewer.cons);
 }
 
 @freezed
 abstract class Reviewer with _$Reviewer {
   const factory Reviewer({
     required UserReview user,
-    required String content,
+    required KtList<String> pros,
+    required KtList<String> cons,
     required KtList<String> imageUrls,
-    required int reviewCount,
+    required double score,
+    required DateTime createdAt,
   }) = _Reviewer;
 }
 
@@ -40,5 +47,6 @@ abstract class UserReview with _$UserReview {
     required String id,
     required String name,
     required String profileImageUrl,
+    required int reviewCount,
   }) = _UserReview;
 }

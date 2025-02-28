@@ -57,10 +57,10 @@ class ReviewListItemWidget extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                ...review.reviewers
+                ...review.getAllReviewContent
                     .map(
-                      (reviewer) => Text(
-                        '• ${reviewer.content}',
+                      (content) => Text(
+                        '• $content',
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontSize: 11.sp),
                       ),

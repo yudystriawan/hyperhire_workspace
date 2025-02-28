@@ -13,9 +13,11 @@ class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
   Reviewer mapToEntity(ReviewerDto model) {
     return Reviewer(
       user: _userReviewMapper.mapToEntity(model.user),
-      content: model.content,
-      imageUrls: model.imageUrls.toImmutableList(),
-      reviewCount: model.reviewCount,
+      pros: model.pros?.toImmutableList() ?? emptyList(),
+      cons: model.cons?.toImmutableList() ?? emptyList(),
+      imageUrls: model.imageUrls?.toImmutableList() ?? emptyList(),
+      score: model.score ?? 0.0,
+      createdAt: model.createdAt ?? DateTime.now(),
     );
   }
 
@@ -23,9 +25,11 @@ class ReviewerMapper implements Mapper<Reviewer, ReviewerDto> {
   ReviewerDto mapToModel(Reviewer entity) {
     return ReviewerDto(
       user: _userReviewMapper.mapToModel(entity.user),
-      content: entity.content,
+      pros: entity.pros.asList(),
+      cons: entity.cons.asList(),
       imageUrls: entity.imageUrls.asList(),
-      reviewCount: entity.reviewCount,
+      score: entity.score,
+      createdAt: entity.createdAt,
     );
   }
 }

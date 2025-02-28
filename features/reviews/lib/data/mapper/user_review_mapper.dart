@@ -10,6 +10,7 @@ class UserReviewMapper implements Mapper<UserReview, UserReviewDto> {
       id: model.id,
       name: model.name,
       profileImageUrl: model.profileImageUrl,
+      reviewCount: model.reviewCount,
     );
   }
 
@@ -19,6 +20,7 @@ class UserReviewMapper implements Mapper<UserReview, UserReviewDto> {
       id: entity.id,
       name: entity.name,
       profileImageUrl: entity.profileImageUrl,
+      reviewCount: entity.reviewCount,
     );
   }
 }

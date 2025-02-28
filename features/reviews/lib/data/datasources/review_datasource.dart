@@ -19,7 +19,9 @@ class ReviewDatasourceImpl implements ReviewDatasource {
       final data = await _db.load('reviewers.json');
       final reviewers =
           (data['data'] as List).map((e) => ReviewerDto.fromJson(e)).toList();
-      reviewers.sort((a, b) => b.reviewCount.compareTo(a.reviewCount));
+      reviewers.sort(
+        (a, b) => b.user.reviewCount.compareTo(a.user.reviewCount),
+      );
       return reviewers;
     } catch (e) {
       rethrow;
