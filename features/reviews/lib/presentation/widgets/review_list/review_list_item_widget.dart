@@ -55,6 +55,11 @@ class ReviewListItemWidget extends StatelessWidget {
           SizedBox(height: 8.w),
           Divider(),
           SizedBox(height: 4.w),
+          Row(
+            children: [
+              // UserProfileImage(url: review.),
+            ],
+          ),
         ],
       ),
     );

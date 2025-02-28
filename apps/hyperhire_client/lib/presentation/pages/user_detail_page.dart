@@ -55,8 +55,8 @@ class UserDetailPage extends StatelessWidget implements AutoRouteWrapper {
         BlocProvider(
           create:
               (context) =>
-                  getIt<ReviewsLoaderBloc>()
-                    ..add(ReviewsLoaderEvent.fetched(userId: id)),
+                  getIt<ReviewsLoaderBloc>(param1: id)
+                    ..add(ReviewsLoaderEvent.fetched()),
         ),
       ],
       child: this,

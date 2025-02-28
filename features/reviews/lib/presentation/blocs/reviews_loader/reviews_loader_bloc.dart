@@ -11,7 +11,9 @@ part 'reviews_loader_state.dart';
 @injectable
 class ReviewsLoaderBloc extends Bloc<ReviewsLoaderEvent, ReviewsLoaderState> {
   final GetReviewsByUserIdUsecase _getReviewsByUserIdUsecase;
-  ReviewsLoaderBloc(this._getReviewsByUserIdUsecase) : super(Initial()) {
+  final String? userId;
+  ReviewsLoaderBloc(this._getReviewsByUserIdUsecase, @factoryParam this.userId)
+    : super(Initial()) {
     on<_Fetched>(_onFetched);
   }
 
@@ -19,12 +21,12 @@ class ReviewsLoaderBloc extends Bloc<ReviewsLoaderEvent, ReviewsLoaderState> {
     _Fetched event,
     Emitter<ReviewsLoaderState> emit,
   ) async {
-    if (event.userId == null) return;
+    if (userId == null) return;
     if (state is Loading) return;
 
     emit(Loading());
 
-    final failureOrReviews = await _getReviewsByUserIdUsecase(event.userId!);
+    final failureOrReviews = await _getReviewsByUserIdUsecase(userId!);
 
     emit(
       failureOrReviews.fold(
