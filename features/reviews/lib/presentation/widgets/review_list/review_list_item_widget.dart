@@ -188,7 +188,7 @@ class ReviewListItemWidget extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(Icons.comment, size: 12.w),
+              AppIcon(AppIcons.icChat, size: 12.w),
               SizedBox(width: 8.w),
               Text(
                 '댓글 달기..',

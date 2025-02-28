@@ -27,4 +27,6 @@ class AppIcons {
   static const String icCrownSecond = '$_assetPath/ic_crown_second.svg';
 
   static const String icCrownThird = '$_assetPath/ic_crown_third.svg';
+
+  static const String icChat = '$_assetPath/ic_chat.svg';
 }
