@@ -36,12 +36,16 @@ class ReviewDatasourceImpl implements ReviewDatasource {
 
   @override
   Future<List<ReviewDto>> getReviewsByUserId(String userId) async {
-    final data = await _db.load('reviews.json');
-    final reviews =
-        (data['data'] as List).map((e) => ReviewDto.fromJson(e)).toList();
-    return reviews
-        .where((e) => e.reviewers.any((r) => r.user.id == userId))
-        .toList();
+    try {
+      final data = await _db.load('reviews.json');
+      final reviews =
+          (data['data'] as List).map((e) => ReviewDto.fromJson(e)).toList();
+      return reviews
+          .where((e) => e.reviewers.any((r) => r.user.id == userId))
+          .toList();
+    } catch (e) {
+      rethrow;
+    }
   }
 }
 

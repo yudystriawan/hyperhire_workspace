@@ -25,7 +25,7 @@ class StarScore extends StatelessWidget {
         IconData icon;
         if (index < score.floor()) {
           icon = Icons.star;
-        } else if (index < score) {
+        } else if (index < score && (score - index) >= 0.5) {
           icon = Icons.star_half;
         } else {
           icon = Icons.star_border;
