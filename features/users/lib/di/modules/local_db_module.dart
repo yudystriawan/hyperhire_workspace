@@ -3,5 +3,6 @@ import 'package:injectable/injectable.dart';
 
 @module
 abstract class LocalDBModule {
-  LocalAssetLoader get db => LocalAssetLoader();
+  @lazySingleton
+  LocalAssetLoader get userDb => LocalAssetLoader();
 }
