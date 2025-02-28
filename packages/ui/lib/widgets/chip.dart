@@ -14,12 +14,10 @@ class AppChip extends StatelessWidget {
         color: Color(0xfff0f0f0),
       ),
       padding: EdgeInsets.symmetric(vertical: 5.w, horizontal: 6.w),
-      child: Center(
-        child: Text(
-          label,
-          style: TextStyle(fontSize: 11.sp, color: Color(0xff868686)),
-          textAlign: TextAlign.center,
-        ),
+      child: Text(
+        label,
+        style: TextStyle(fontSize: 11.sp, color: Color(0xff868686)),
+        textAlign: TextAlign.center,
       ),
     );
   }

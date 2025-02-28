@@ -26,22 +26,28 @@ class UserProfileWidget extends StatelessWidget {
           LoadSuccess() => Column(
             children: [
               Container(
-                constraints: BoxConstraints(minWidth: 160.w),
+                constraints: BoxConstraints(
+                  minHeight: 160.w,
+                  minWidth: double.infinity,
+                ),
+                padding: EdgeInsets.all(24.w),
                 color: Colors.white,
                 child: Column(
                   children: [
                     Container(
                       width: 120.w,
                       height: 120.w,
-
                       decoration: BoxDecoration(shape: BoxShape.circle),
-                      child: UserProfileImage(url: state.user.imageUrl),
+                      child: UserProfileImage(
+                        url: state.user.imageUrl,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     SizedBox(height: 12.w),
                     Text(state.user.name, style: TextStyle(fontSize: 20.sp)),
                     SizedBox(height: 2.w),
                     Text(
-                      state.user.tier.toString(),
+                      state.user.tier.name,
                       style: TextStyle(
                         fontSize: 14.sp,
                         color: Color(0xffFFD233),
