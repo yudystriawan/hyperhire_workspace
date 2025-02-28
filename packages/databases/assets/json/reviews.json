@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "rating": 4.07,
+            "reviewCount": 200,
+            "product": {
+                "id": "1",
+                "name": "AMD 라이젠 5 5600X 버미어정품 멀티팩",
+                "imageUrl": "img_product_1.png"
+            },
+            "keywords": [
+                "“가격 저렴해요”",
+                "“CPU온도 고온”",
+                "“서멀작업 가능해요”",
+                "“게임 잘 돌아가요”",
+                "“발열이 적어요”"
+            ],
+            "reviewers": [
+                {
+                    "user": {
+                        "id": "1",
+                        "name": "Name01",
+                        "profileImageUrl": "img_profile_1.png",
+                        "reviewCount": 35
+                    },
+                    "content": "멀티 작업도 잘 되고 꽤 괜찮습니다. 저희 회사 고객님들에게도 추천 가능한 제품인 듯 합니다.;3600에서 바꾸니 체감이 살짝 되네요. 버라이어티한 느낌 까지는 아닙니다.",
+                    "imageUrls": [
+                        "img_review_1.png",
+                        "img_review_2.png",
+                        "img_review_3.png"
+                    ],
+                    "score": 4.0,
+                    "createdAt": "2022-12-09T00:00:00Z"
+                }
+            ]
+        }
+    ]
+}
